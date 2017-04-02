@@ -1,6 +1,3 @@
-//Programa : Sensor de umidade e temperatura DHT11
-//Autor : Arduino e Cia
-
 #include <dht.h>
 
 #define dht_dpin A1 //Pino DATA do Sensor ligado na porta Analogica A1
@@ -25,10 +22,6 @@ void loop()
   Serial.print(";");
   Serial.println();
 
-  //Não diminuir o valor abaixo. O ideal é a leitura a cada 15 segundos -> Limitante ThingSpark
-  //delay(15000);  
-
   unsigned long startMillis = millis();
   while(millis() - startMillis < (unsigned long)ms_delay);
-  //while(millis() - startMillis < 2000);
 }
